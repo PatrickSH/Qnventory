@@ -1,0 +1,16 @@
+#app{
+    width: 100vw;
+    height: 100vh;
+    background-color: $mainBg;
+    margin: 0;
+    padding: 0;
+    outline: 0px;
+
+    #innerApp{
+        width:1200px;
+        margin:0 auto;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,31 @@
+#firstlogin{
+    align-self: center;
+    justify-self: center;
+    margin: 0 auto;
+
+    input[type=email],input[type=password],input[type=text]{
+        margin-top: 10px;
+        display: block;
+        width: 250px;
+        border:0px;
+        border-bottom: 1px solid #7385ED;
+        background: transparent;
+        outline: 0;
+    }
+
+    button{
+        width: 100px;
+        height:35px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 25px;
+        cursor: pointer;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        background-color: #7385ED;
+        color: #fff;
+        outline: 0px;
+        transition: width 0.5s;
+        position: relative;
+    }
+}
