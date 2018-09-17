@@ -31,5 +31,5 @@ const app = new Vue({
     methods: {
         hideModal : function(e){
         }
-    }
+    },
 });

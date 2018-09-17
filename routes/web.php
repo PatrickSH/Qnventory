@@ -20,6 +20,11 @@ Route::get('/user/firstlogin',[
    'uses' => 'Auth\LoginController@showFirstLogin'
 ]);
 
+Route::get('/dashboard',[
+    'as' => 'dashboard',
+    'uses' => 'DashboardController@index'
+]);
+
 Route::post('/user/login',[
    'uses' => 'Auth\LoginController@doLogin'
 ]);

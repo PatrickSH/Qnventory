@@ -96,6 +96,9 @@
                 }).then(function (response) {
                     vm.isLoading = false;
                     vm.isDone = true;
+                    setTimeout(function(){
+                        window.location.href = "/dashboard";
+                    },1500)
                 }).catch(function (error) {
                     this.isLoading = false;
                 });
