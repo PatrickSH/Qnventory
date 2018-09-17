@@ -7,9 +7,11 @@
 require('./bootstrap');
 require('axios');
 window.Vue = require('vue');
-axios.defaults.headers.common['token_one'] = document.head.querySelector("[property~=token_one][content]").content
-axios.defaults.headers.common['token_two'] = document.head.querySelector("[property~=token_two][content]").content
-axios.defaults.headers.common['token_three'] = document.head.querySelector("[property~=token_three][content]").content
+require('./misc/clickevents');
+axios.defaults.headers.common['Token-one'] = document.head.querySelector("[property~=token_one][content]").content;
+axios.defaults.headers.common['Token-two'] = document.head.querySelector("[property~=token_two][content]").content;
+axios.defaults.headers.common['Token-three'] = document.head.querySelector("[property~=token_three][content]").content;
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -17,10 +19,17 @@ axios.defaults.headers.common['token_three'] = document.head.querySelector("[pro
  */
 Vue.component('login-component', require('./components/LoginComponent.vue'));
 Vue.component('user-data', require('./components/UserDataComponent.vue'));
+Vue.component('modal', require('./components/ModalComponent.vue'));
+Vue.component('first-login-data', require('./components/FirstLoginDataComponent.vue'));
+
 
 const app = new Vue({
     el: '#app',
     data: {
         message: "Hej!"
+    },
+    methods: {
+        hideModal : function(e){
+        }
     }
 });

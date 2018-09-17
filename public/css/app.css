@@ -1,4 +1,258 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);button {
+@import url(https://fonts.googleapis.com/css?family=Nunito);@-webkit-keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes opacityShow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityShow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#app .modal {
+  display: block;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+#app .modal .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#app .modal .innerModal {
+  min-height: 400px;
+  min-width: 600px;
+  background-color: #ffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: block;
+  z-index: 2;
+  padding: 35px;
+}
+
+#app .modal .innerModal .content {
+  margin-top: 40px;
+  display: block;
+}
+
+#app .modal .innerModal .content p {
+  font-size: 16px;
+}
+
+#app .modal.hide {
+  opacity: 0;
+}
+
+#app .modal.hide.remove {
+  display: none;
+}
+
+.noloading-button {
+  width: 100px;
+  height: 35px;
+  display: block;
+  margin-top: 25px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: #7385ED;
+  color: #fff;
+  outline: 0px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  position: relative;
+  padding: 0px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.bluebutton {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#app .noloading-button:hover,
+#app .bluebutton:hover,
+#app .bluebutton.active {
+  border: 1px solid #7385ED;
+  background-color: transparent;
+  color: #7385ED;
+}
+
+#app button.loading {
+  color: transparent;
+  cursor: not-allowed;
+}
+
+/***Done checkmark*****/
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: transparent;
+  fill: none;
+  -webkit-animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+          animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  display: none;
+}
+
+.bluebutton .checkmark.active {
+  display: block;
+  -webkit-animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+          animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  -webkit-box-shadow: inset 0px 0px 0px transparent;
+          box-shadow: inset 0px 0px 0px transparent;
+}
+
+.checkmark__check {
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  -webkit-animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+          animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes scale {
+  0%, 100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+            transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+            transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@-webkit-keyframes fill {
+  100% {
+    -webkit-box-shadow: inset 0px 0px 0px 30px transparent;
+            box-shadow: inset 0px 0px 0px 30px transparent;
+  }
+}
+
+@keyframes fill {
+  100% {
+    -webkit-box-shadow: inset 0px 0px 0px 30px transparent;
+            box-shadow: inset 0px 0px 0px 30px transparent;
+  }
+}
+
+.logobar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  max-width: 100vw;
+  padding: 20px;
+  height: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.logobar h1 {
+  color: #7385ED;
+  font-size: 2.25rem;
+}
+
+span.logo-in-text {
+  color: #7385ED;
+}
+
+#app {
+  overflow: hidden;
+}
+
+.data-wrapper {
+  width: 100%;
+}
+
+.data-wrapper .step h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+button {
   outline: 0px;
   -webkit-transition: width 1s;
   transition: width 1s;
@@ -14,10 +268,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .input-groups .group {
-  display: block;
+  display: inherit;
   overflow: hidden;
   -webkit-transition: max-width 1s;
   transition: max-width 1s;
@@ -30,6 +288,17 @@
 
 .input-groups .group.enabled {
   max-width: 600px;
+}
+
+.input-groups .group.radios label {
+  margin-right: 20px;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.input-groups .group.image label {
+  margin-right: 20px;
+  font-size: 16px;
 }
 
 button.enabled {
@@ -133,16 +402,18 @@ button.loading .dot:nth-child(3) {
   position: relative;
 }
 
+#login .input-groups {
+  display: -webkit-box;
+  -webkit-box-orient: unset;
+}
+
+#login .input-groups .group {
+  display: block;
+}
+
 #login button.loading {
   color: transparent;
   cursor: not-allowed;
-}
-
-#firstlogin {
-  -ms-flex-item-align: center;
-      align-self: center;
-  justify-self: center;
-  margin: 0 auto;
 }
 
 #firstlogin input[type=email],
@@ -157,12 +428,15 @@ button.loading .dot:nth-child(3) {
   outline: 0;
 }
 
+#firstlogin button:first-of-type {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 #firstlogin button {
-  width: 100px;
+  min-width: 100px;
   height: 35px;
   display: block;
-  margin: 0 auto;
-  margin-top: 25px;
   cursor: pointer;
   border-radius: 20px;
   border: 1px solid transparent;
@@ -172,6 +446,41 @@ button.loading .dot:nth-child(3) {
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
   position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#firstlogin #startNow.done {
+  color: transparent;
+}
+
+.data-wrapper .step .organization-step {
+  margin-top: 20px;
+}
+
+.data-wrapper .step .input-groups {
+  margin-left: 20px;
+}
+
+.data-wrapper .step #startNow {
+  margin-top: 30px;
+}
+
+.slide-fade-enter-active {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.slide-fade-leave-active {
+  -webkit-transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  opacity: 0;
 }
 
 #app {

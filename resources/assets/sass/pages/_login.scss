@@ -28,6 +28,8 @@
         transition: width 0.5s;
         position: relative;
     }
+    .input-groups{display: -webkit-box; -webkit-box-orient: unset;}
+    .input-groups .group{display: block;}
 }
 
 #login button.loading{

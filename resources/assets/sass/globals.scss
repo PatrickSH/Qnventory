@@ -1,3 +1,33 @@
+.logobar{
+    display: flex;
+    width: 100vw;
+    max-width: 100vw;
+    padding: 20px;
+    height: 100px;
+    box-sizing: border-box;
+
+    h1{
+        color: #7385ED;
+        font-size: 2.25rem;
+    }
+}
+
+span.logo-in-text{color: #7385ED;}
+
+#app{overflow: hidden;}
+
+
+.data-wrapper{
+    width: 100%;
+
+    .step{
+        h2{
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+    }
+}
+
 button{
     outline:0px;
     transition: width 1s;
@@ -11,15 +41,29 @@ button{
 
 .input-groups{
     display:flex;
-
+    flex-direction: column;
     .group{
-        display: block;
+        display: inherit;
         overflow:hidden;
         transition: max-width 1s;
         width: auto;
     }
     .group.disabled{max-width: 0px;}
     .group.enabled{max-width: 600px;}
+    .group.radios{
+        label{
+            margin-right: 20px;
+            font-size: 16px;
+            margin-left: 5px;
+        }
+    }
+
+    .group.image{
+        label{
+            margin-right: 20px;
+            font-size: 16px;
+        }
+    }
 }
 
 

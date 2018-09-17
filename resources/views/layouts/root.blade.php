@@ -14,9 +14,11 @@
     </head>
     <body>
         <div id="app">
+            @yield('logo')
             <div id="innerApp">
                 @yield('content')
             </div>
+            @yield('outercontent')
         </div>
         <script src="/js/app.js"></script>
     </body>

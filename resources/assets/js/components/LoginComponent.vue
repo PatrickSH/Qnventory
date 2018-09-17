@@ -39,6 +39,7 @@
     </div>
 </template>
 <script>
+    import TalkerMixin from '../mixins/TalkerMixin';
     export default {
         props: ['message'],
         data() {
@@ -52,6 +53,8 @@
                 isLoadingCreate : false
             }
         },
+
+        mixins: [TalkerMixin],
 
         methods : {
             doLogin : function(event){

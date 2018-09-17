@@ -36,7 +36,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->guzzleSettings = ['base_uri' => 'http://api.freezermanager.dev.cc/'];
+        $this->guzzleSettings = ['base_uri' => 'https://api.qnventory.com/'];
     }
 
     public function doLogin(Request $request)
