@@ -18,5 +18,10 @@
         "laravel-mix": "^2.0",
         "lodash": "^4.17.5",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "apexcharts": "^1.5.4",
+        "vue-apexcharts": "^1.1.1",
+        "vue-google-charts": "^0.3.1"
     }
 }

@@ -3,5 +3,5 @@
 @extends('layouts.security')
 
 @section('content')
-
+<dashboard></dashboard>
 @endsection

@@ -21,6 +21,7 @@ Vue.component('login-component', require('./components/LoginComponent.vue'));
 Vue.component('user-data', require('./components/UserDataComponent.vue'));
 Vue.component('modal', require('./components/ModalComponent.vue'));
 Vue.component('first-login-data', require('./components/FirstLoginDataComponent.vue'));
+Vue.component('dashboard', require('./components/DashboardComponent.vue'));
 
 
 const app = new Vue({

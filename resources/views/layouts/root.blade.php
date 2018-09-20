@@ -12,7 +12,11 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    @if(isset(session("security")['token']))
+        <body class="authed">
+    @else
+        <body class="unauthed">
+    @endif
         <div id="app">
             @yield('logo')
             <div id="innerApp">
