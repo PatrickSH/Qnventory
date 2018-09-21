@@ -7,6 +7,7 @@
         <meta property="token_one" content="@yield('email')">
         <meta property="token_two" content="@yield('token')">
         <meta property="token_three" content="@yield('user_id')">
+        <meta property="user_data" content="@yield('user_data')">
         <title>Laravel</title>
         <link href="/css/app.css" rel="stylesheet" type="text/css"/>
         <!-- Fonts -->

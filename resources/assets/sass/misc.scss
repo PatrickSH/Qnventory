@@ -61,7 +61,26 @@
   transition: all 0.5s;
 }
 
-.bluebutton{transition: all 0.5s;}
+.bluebutton{
+  width: 100px;
+  height:35px;
+  display: block;
+  margin-top: 25px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: #7385ED;
+  color: #fff;
+  outline: 0px;
+  transition: width 0.5s;
+  position: relative;
+  padding:0px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
 
 #app .noloading-button:hover,
 #app .bluebutton:hover,
@@ -71,7 +90,7 @@
   color:#7385ED;
 }
 
-#app button.loading{
+#app button.loading, #app .bluebutton.done{
   color:transparent;
   cursor: not-allowed;
 }

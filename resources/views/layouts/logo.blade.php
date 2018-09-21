@@ -1,4 +1,4 @@
-@if(isset(session("security")['token'])) <!--Logged in -->
+@if(isset(session("user")->logins) && session("user")->logins >= 1) <!--Logged in -->
 @section('logo')
     <div class="menu">
         <div class="logobar authed">
@@ -13,6 +13,7 @@
             </ul>
         </div>
     </div>
+    <user-image></user-image>
 @endsection
 @else <!--NOt logged in -->
 @section('logo')

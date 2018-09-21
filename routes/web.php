@@ -25,6 +25,14 @@ Route::get('/dashboard',[
     'uses' => 'DashboardController@index'
 ]);
 
+Route::get('/profile',[
+   'uses' => 'UserController@index'
+]);
+
+Route::get('/user/refresh-session',[
+    'uses' => 'UserController@refreshUserSession'
+]);
+
 Route::post('/user/login',[
    'uses' => 'Auth\LoginController@doLogin'
 ]);

@@ -1,0 +1,1 @@
+@section('user_data',json_encode(session('user')))
