@@ -299,6 +299,11 @@
   border-right: 1px solid #ebebeb;
 }
 
+.menu .organization-switcher {
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
 .menu ul {
   list-style: none;
   padding-left: 20px;
@@ -476,6 +481,24 @@ ul {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+/* width */
+
+#innerApp::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+
+#innerApp::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+
+#innerApp::-webkit-scrollbar-thumb {
+  background: #636b6f;
 }
 
 #login {
@@ -682,6 +705,58 @@ ul {
 #profilePresenter p {
   font-style: italic;
   text-align: center;
+}
+
+#app .requestnewqrmodel {
+  display: none;
+}
+
+#app .requestnewqrmodel.active {
+  display: block;
+}
+
+#qrcodes {
+  padding-top: 30px;
+  padding-right: 50px;
+  width: 100%;
+}
+
+#qrcodes .bluebutton {
+  width: auto;
+  min-width: 100px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+#qrcodes #code-overview .codes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#qrcodes #code-overview .codes .code {
+  max-width: 220px;
+  height: 220px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 21%;
+          flex: 1 0 21%;
+  /* explanation below */
+  margin: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 #app {

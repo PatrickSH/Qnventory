@@ -58,6 +58,8 @@ class LoginController extends Controller
                     'id' => base64_encode($userData->id)
                 ]]);
         }
+
+        return response()->json(['logins' => $userData->logins]);
     }
 
     public function showFirstLogin(){

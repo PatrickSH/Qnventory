@@ -11,6 +11,7 @@ require('./misc/clickevents');
 axios.defaults.headers.common['Token-one'] = document.head.querySelector("[property~=token_one][content]").content;
 axios.defaults.headers.common['Token-two'] = document.head.querySelector("[property~=token_two][content]").content;
 axios.defaults.headers.common['Token-three'] = document.head.querySelector("[property~=token_three][content]").content;
+axios.defaults.headers.common['Active-org'] = document.head.querySelector("[property~=active_org][content]").content;
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -23,6 +24,8 @@ Vue.component('modal', require('./components/ModalComponent.vue'));
 Vue.component('first-login-data', require('./components/FirstLoginDataComponent.vue'));
 Vue.component('dashboard', require('./components/DashboardComponent.vue'));
 Vue.component('user-image', require('./components/UserImageComponent.vue'));
+Vue.component('qr-codes', require('./components/qr-codes/QRCodesComponent.vue'));
+Vue.component('organizations', require('./components/OrganizationSwitcherComponent.vue'));
 
 
 const app = new Vue({

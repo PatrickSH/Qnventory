@@ -26,4 +26,13 @@ class UserController extends Controller
         session(['user' => json_decode( $userData )]);
         return $userData;
     }
+
+    public function setActiveOrg(Request $request){
+        $userData = session('user');
+        $userData->active_org = $request->get('active_org');
+
+        session(['user' => $userData]);
+
+        return response()->json($userData);
+    }
 }

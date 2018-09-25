@@ -34,6 +34,11 @@
     height: 100%;
     border-right: 1px solid $eb;
 
+    .organization-switcher{
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+
     ul{
         list-style: none;
         padding-left: 20px;
@@ -169,4 +174,20 @@ button.loading .dot{
 li, ul{
     user-select: none;
 }
+
+/* width */
+#innerApp::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+#innerApp::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+#innerApp::-webkit-scrollbar-thumb {
+    background: $textGrey;
+}
+
 

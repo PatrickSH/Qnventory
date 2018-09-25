@@ -70,7 +70,11 @@
                         password: this.password,
                     }).then(function (response) {
                         cl.isLoadingLogin = false;
-                        window.location.href = "user/firstlogin"
+                        if(response.data.logins == 1){
+                            window.location.href = "user/firstlogin";
+                        }else{
+                            window.location.href = "/dashboard";
+                        }
                     }).catch(function (error) {
                         console.log(error);
                     });

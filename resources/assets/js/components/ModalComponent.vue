@@ -1,5 +1,5 @@
 <template>
-    <div class="modal">
+    <div class="modal" v-bind:class="customClass">
         <div class="overlay"></div>
         <div class="innerModal">
             <slot name="title"></slot>
@@ -17,6 +17,6 @@
                 image: ""
             }
         },
-        props : []
+        props : ['customClass']
     }
 </script>
