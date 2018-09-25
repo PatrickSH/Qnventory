@@ -60,3 +60,8 @@ Route::get('/user/firstlogin',[
 Route::get('/user/refresh-session',[
     'uses' => 'UserController@refreshUserSession'
 ]);
+
+
+Route::get('/organization/{org_id}/scan/{code_uid}',[
+    'uses' => 'ScanController@routeScanAction'
+]);

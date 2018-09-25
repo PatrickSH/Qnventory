@@ -250,6 +250,29 @@
   }
 }
 
+label.label-floating {
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 0px;
+  top: 4px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+
+.float-input-label:focus ~ label,
+.float-input-label:not(:placeholder-shown) ~ label {
+  top: 25px;
+  font-size: 14px;
+  color: #009688;
+  left: 0;
+}
+
 .logobar.unauthed {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -499,6 +522,12 @@ ul {
 
 #innerApp::-webkit-scrollbar-thumb {
   background: #636b6f;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 900px) {
+  #app .bluebutton:hover {
+    background-color: #7385ED;
+  }
 }
 
 #login {
@@ -757,6 +786,228 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  #scan {
+    padding: 20px;
+    width: 100%;
+  }
+
+  #scan h1 {
+    color: #7385ED;
+    font-size: 2.25rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  #scan .newFreezerItem .input-groups {
+    margin-top: 30px;
+    width: 100%;
+    display: block;
+  }
+
+  #scan .newFreezerItem .input-groups .group {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 45px;
+  }
+
+  #scan .newFreezerItem .input-groups .group select {
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #7385ED;
+    background: transparent;
+    outline: 0;
+  }
+
+  #scan .newFreezerItem .input-groups .group input {
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #7385ED;
+    background: transparent;
+    outline: 0;
+  }
+
+  #scan .newFreezerItem .input-groups .group .bluebutton {
+    margin-top: 15px;
+  }
+
+  #scan .newFreezerItem .input-groups .group.select label {
+    top: 22px;
+  }
+
+  #scan .newFreezerItem .input-groups .group.vue-date {
+    overflow: visible;
+  }
+
+  #scan .newFreezerItem .input-groups .group.vue-date label {
+    top: 24px;
+  }
+
+  #use-code-scan {
+    padding: 20px;
+    width: 100%;
+  }
+
+  #use-code-scan h1 {
+    color: #7385ED;
+    font-size: 2.25rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  #use-code-scan .use-code {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+  }
+
+  #use-code-scan .use-code .bluebutton {
+    margin-top: 0px;
+  }
+
+  #invalid-code-scan {
+    padding: 20px;
+    width: 100%;
+  }
+
+  #invalid-code-scan h1 {
+    color: #7385ED;
+    font-size: 2.25rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  #invalid-code-scan h2 {
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (min-device-width: 321px) and (max-device-width: 700px) {
+  #scan {
+    padding: 20px;
+  }
+
+  #scan h1 {
+    color: #7385ED;
+    font-size: 2.25rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  #scan .newFreezerItem .input-groups {
+    margin-top: 30px;
+    width: 100%;
+    display: block;
+  }
+
+  #scan .newFreezerItem .input-groups .group {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 45px;
+  }
+
+  #scan .newFreezerItem .input-groups .group select {
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #7385ED;
+    background: transparent;
+    outline: 0;
+  }
+
+  #scan .newFreezerItem .input-groups .group input {
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #7385ED;
+    background: transparent;
+    outline: 0;
+  }
+
+  #scan .newFreezerItem .input-groups .group .bluebutton {
+    margin-top: 15px;
+  }
+
+  #scan .newFreezerItem .input-groups .group.select label {
+    top: 22px;
+  }
+
+  #scan .newFreezerItem .input-groups .group.vue-date {
+    overflow: visible;
+  }
+
+  #scan .newFreezerItem .input-groups .group.vue-date label {
+    top: 24px;
+  }
+
+  #use-code-scan {
+    padding: 20px;
+    width: 100%;
+  }
+
+  #use-code-scan h1 {
+    color: #7385ED;
+    font-size: 2.25rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  #use-code-scan .use-code {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+  }
+
+  #use-code-scan .use-code .bluebutton {
+    margin-top: 0px;
+  }
+
+  #invalid-code-scan {
+    padding: 20px;
+    width: 100%;
+  }
+
+  #invalid-code-scan h1 {
+    color: #7385ED;
+    font-size: 2.25rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  #invalid-code-scan h2 {
+    text-align: center;
+  }
 }
 
 #app {

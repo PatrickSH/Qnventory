@@ -1,0 +1,195 @@
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+  #scan{
+    padding:20px;
+    width: 100%;
+
+    h1{
+      color: $ourBlue;
+      font-size: 2.25rem;
+      user-select: none;
+    }
+
+    .newFreezerItem{
+      .input-groups{
+        margin-top: 30px;
+        width: 100%;
+        display: block;
+
+        .group{
+          width: 100%;
+          margin-bottom: 10px;
+          position: relative;
+          overflow: hidden;
+          height: 45px;
+
+          select{
+            width: 100%;
+            border: 0px;
+            border-bottom: 1px solid #7385ED;
+            background: transparent;
+            outline: 0;
+          }
+
+          input{
+            width: 100%;
+            border: 0px;
+            border-bottom: 1px solid #7385ED;
+            background: transparent;
+            outline: 0;
+          }
+          .bluebutton{
+            margin-top: 15px;
+          }
+
+          &.select{
+            label{
+              top:22px;
+            }
+          }
+          &.vue-date{
+            overflow: visible;
+            label {
+              top: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #use-code-scan{
+    padding:20px;
+    width: 100%;
+
+    h1{
+      color: $ourBlue;
+      font-size: 2.25rem;
+      user-select: none;
+    }
+    .use-code{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      .bluebutton{
+        margin-top: 0px;
+      }
+    }
+  }
+
+  #invalid-code-scan{
+    padding:20px;
+    width: 100%;
+
+    h1{
+      color: $ourBlue;
+      font-size: 2.25rem;
+      user-select: none;
+    }
+
+    h2{
+      text-align: center;
+      margin-top: 50px;
+    }
+  }
+}
+
+@media only screen
+and (min-device-width : 321px)
+and (max-device-width : 700px) {
+  #scan{
+    padding:20px;
+
+    h1{
+      color: $ourBlue;
+      font-size: 2.25rem;
+      user-select: none;
+    }
+
+    .newFreezerItem{
+      .input-groups{
+        margin-top: 30px;
+        width: 100%;
+        display: block;
+
+        .group{
+          width: 100%;
+          margin-bottom: 10px;
+          position: relative;
+          overflow: hidden;
+          height: 45px;
+
+          select{
+            width: 100%;
+            border: 0px;
+            border-bottom: 1px solid #7385ED;
+            background: transparent;
+            outline: 0;
+          }
+
+          input{
+            width: 100%;
+            border: 0px;
+            border-bottom: 1px solid #7385ED;
+            background: transparent;
+            outline: 0;
+          }
+          .bluebutton{
+            margin-top: 15px;
+          }
+
+          &.select{
+            label{
+              top:22px;
+            }
+          }
+          &.vue-date{
+            overflow: visible;
+            label {
+              top: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #use-code-scan{
+    padding:20px;
+    width: 100%;
+
+    h1{
+      color: $ourBlue;
+      font-size: 2.25rem;
+      user-select: none;
+    }
+    .use-code{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      .bluebutton{
+        margin-top: 0px;
+      }
+    }
+  }
+
+  #invalid-code-scan{
+    padding:20px;
+    width: 100%;
+
+    h1{
+      color: $ourBlue;
+      font-size: 2.25rem;
+      user-select: none;
+    }
+
+    h2{
+      text-align: center;
+    }
+  }
+}
+

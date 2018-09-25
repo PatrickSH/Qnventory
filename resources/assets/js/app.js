@@ -26,6 +26,8 @@ Vue.component('dashboard', require('./components/DashboardComponent.vue'));
 Vue.component('user-image', require('./components/UserImageComponent.vue'));
 Vue.component('qr-codes', require('./components/qr-codes/QRCodesComponent.vue'));
 Vue.component('organizations', require('./components/OrganizationSwitcherComponent.vue'));
+Vue.component('create-freezer-item', require('./components/scan/CreateFreezerItemComponent.vue'));
+Vue.component('use-qr-code-scan', require('./components/scan/UseQRCodeComponent.vue'));
 
 
 const app = new Vue({

@@ -191,3 +191,11 @@ li, ul{
 }
 
 
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 900px) {
+    #app .bluebutton:hover{
+        background-color: $ourBlue;
+    }
+}
+
