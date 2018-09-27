@@ -36,6 +36,7 @@ Vue.component('organizations', require('./components/OrganizationSwitcherCompone
 Vue.component('create-freezer-item', require('./components/scan/CreateFreezerItemComponent.vue'));
 Vue.component('use-qr-code-scan', require('./components/scan/UseQRCodeComponent.vue'));
 Vue.component('list-org-cats', require('./components/ListOrganizationCategories.vue'));
+Vue.component('list-org-freezers', require('./components/ListOrganizationFreezers.vue'));
 
 
 const app = new Vue({

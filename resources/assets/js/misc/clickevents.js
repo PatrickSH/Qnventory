@@ -33,16 +33,35 @@ Vue.directive('show-loading-close',function(el){
 });
 
 Vue.directive('open-model',function(el,binding){
+
    el.addEventListener('click',function(){
        var classOpen = "." + binding.value.bind;
        var modal = document.querySelector(classOpen);
        modal.classList.remove("remove");
        modal.classList.remove("hide");
        modal.querySelector("input").value = "";
+       modal.querySelector("textarea").value = "";
        modal.querySelector(".checkmark").classList.remove("active");
        modal.querySelector("button").classList.remove("done");
        modal.classList += " active";
    });
+
+   //Detect click outside modal to close it
+   function closeOnOutsideClick(e){
+       var classOpen = "." + binding.value.bind;
+       var modal = document.querySelector(classOpen);
+       var close = '.overlay';
+       if (event.target.matches(close)) {
+
+           modal.classList += " hide"; //Animation last 0.5s
+
+           setTimeout(function () {
+               modal.classList += " remove";
+           },550);
+       }
+   }
+   document.body.addEventListener('click', closeOnOutsideClick);
+
 });
 
 Vue.directive('request-qr-codes',function (el,binding) {

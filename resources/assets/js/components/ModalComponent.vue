@@ -20,6 +20,11 @@
                         id : "",
                         label : "",
                         new_label : "",
+                    },
+                    freezer_editing_open : {
+                        id : "",
+                        name : "",
+                        desc : "",
                     }
                 },
                 image: "",
@@ -29,10 +34,20 @@
 
         //Here will be a lot of different emits which this components that uses the modal dependts on
         mounted(){
+            //Category
             this.$root.$on('category_editing_open', data => {
                 this.slotProps.category_editing_open.new_label = "";
                 this.slotProps.category_editing_open.id = data.id;
                 this.slotProps.category_editing_open.label = data.label;
+            });
+
+            //Freezer
+            this.$root.$on('freezer_editing_open', data => {
+                this.slotProps.freezer_editing_open.name = "";
+                this.slotProps.freezer_editing_open.desc = "";
+                this.slotProps.freezer_editing_open.id = data.id;
+                this.slotProps.freezer_editing_open.desc = data.desc;
+                this.slotProps.freezer_editing_open.name = data.name;
             });
         }
     }

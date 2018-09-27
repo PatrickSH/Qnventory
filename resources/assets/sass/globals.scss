@@ -214,6 +214,22 @@ li, ul{
     display: block;
 }
 
+#app .editfreezer{
+    display: none;
+}
+
+#app .editfreezer.active{
+    display: block;
+}
+
+#app .createFreezer{
+    display: none;
+}
+
+#app .createFreezer.active{
+    display: block;
+}
+
 
 @media only screen
 and (min-device-width : 320px)

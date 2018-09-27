@@ -548,6 +548,22 @@ ul {
   display: block;
 }
 
+#app .editfreezer {
+  display: none;
+}
+
+#app .editfreezer.active {
+  display: block;
+}
+
+#app .createFreezer {
+  display: none;
+}
+
+#app .createFreezer.active {
+  display: block;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 900px) {
   #app .bluebutton:hover {
     background-color: #7385ED;
@@ -903,6 +919,134 @@ ul {
 }
 
 #category-page .bluebutton {
+  width: 150px;
+}
+
+.inner-freezer-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.inner-freezer-table .freezer {
+  max-width: 220px;
+  width: 220px;
+  height: 220px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 21%;
+          flex: 1 0 21%;
+  margin: 5px;
+  text-align: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+.inner-freezer-table .freezer h2 {
+  color: #636b6f;
+  font-size: 28px;
+}
+
+.inner-freezer-table .freezer p {
+  color: #7385ED;
+  font-size: 16px;
+}
+
+.inner-freezer-table .freezer .toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.inner-freezer-table .freezer .toolbar .icon {
+  color: #7385ED;
+}
+
+.inner-freezer-table .freezer .toolbar .trash {
+  margin-right: 20px;
+}
+
+.editfreezer .input-groups {
+  margin-top: 30px;
+  width: 100%;
+  display: block;
+}
+
+.editfreezer .input-groups .group {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 45px;
+}
+
+.editfreezer .input-groups .group textarea {
+  max-height: 35px;
+}
+
+.editfreezer .input-groups .group.textarea {
+  height: 55px;
+}
+
+.editfreezer .input-groups .group.textarea .float-input-label:focus ~ label,
+.editfreezer .input-groups .group.textarea .float-input-label:not(:placeholder-shown) ~ label {
+  top: 32px;
+}
+
+.createFreezer .input-groups {
+  margin-top: 30px;
+  width: 100%;
+  display: block;
+}
+
+.createFreezer .input-groups .group {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 45px;
+}
+
+.createFreezer .input-groups .group textarea {
+  max-height: 35px;
+}
+
+.createFreezer .input-groups .group.textarea {
+  height: 55px;
+}
+
+.createFreezer .input-groups .group.textarea .float-input-label:focus ~ label,
+.createFreezer .input-groups .group.textarea .float-input-label:not(:placeholder-shown) ~ label {
+  top: 32px;
+}
+
+#freezer-page .bluebutton {
   width: 150px;
 }
 
