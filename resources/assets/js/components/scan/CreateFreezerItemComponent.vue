@@ -104,7 +104,7 @@
                 vm.isLoading = true;
                 axios.post(this.makeUrl + 'store',vm.postData).then(function(res){
                     vm.isLoading = false;
-                    vm.isDone = true;
+                    vm.isDone
                 }).catch(function(res){
                    console.log(res);
                 });

@@ -8,6 +8,13 @@ require('./bootstrap');
 require('axios');
 window.Vue = require('vue');
 require('./misc/clickevents');
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faTrash,faEdit } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+library.add(faTrash,faEdit);
+
+Vue.component('font-awesome-icon', FontAwesomeIcon);
+
 axios.defaults.headers.common['Token-one'] = document.head.querySelector("[property~=token_one][content]").content;
 axios.defaults.headers.common['Token-two'] = document.head.querySelector("[property~=token_two][content]").content;
 axios.defaults.headers.common['Token-three'] = document.head.querySelector("[property~=token_three][content]").content;
@@ -28,6 +35,7 @@ Vue.component('qr-codes', require('./components/qr-codes/QRCodesComponent.vue'))
 Vue.component('organizations', require('./components/OrganizationSwitcherComponent.vue'));
 Vue.component('create-freezer-item', require('./components/scan/CreateFreezerItemComponent.vue'));
 Vue.component('use-qr-code-scan', require('./components/scan/UseQRCodeComponent.vue'));
+Vue.component('list-org-cats', require('./components/ListOrganizationCategories.vue'));
 
 
 const app = new Vue({

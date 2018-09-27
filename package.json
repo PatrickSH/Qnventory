@@ -20,7 +20,12 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.4",
+        "@fortawesome/free-solid-svg-icons": "^5.3.1",
+        "@fortawesome/vue-fontawesome": "^0.1.1",
         "apexcharts": "^1.5.4",
+        "i": "^0.3.6",
+        "npm": "^6.4.1",
         "v-calendar": "^0.9.7",
         "vue-apexcharts": "^1.1.1",
         "vue-google-charts": "^0.3.1",

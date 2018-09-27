@@ -45,6 +45,11 @@ Route::group(['middleware' => ['loggedin']],function (){
         'as' => 'codes'
     ]);
 
+    Route::get('/category',[
+        'uses' => 'CategoryController@index',
+        'as' => 'category'
+    ]);
+
 });
 
 

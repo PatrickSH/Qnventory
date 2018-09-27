@@ -190,6 +190,30 @@ li, ul{
     background: $textGrey;
 }
 
+#app .requestnewqrmodel{
+    display: none;
+}
+
+#app .requestnewqrmodel.active{
+    display: block;
+}
+
+#app .editcategory{
+    display: none;
+}
+
+#app .editcategory.active{
+    display: block;
+}
+
+#app .createCategory{
+    display: none;
+}
+
+#app .createCategory.active{
+    display: block;
+}
+
 
 @media only screen
 and (min-device-width : 320px)

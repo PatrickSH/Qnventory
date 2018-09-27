@@ -9,10 +9,38 @@ Vue.directive('custom-click', function (el) {
     });
 });
 
+//Closes modal and shows loading
+Vue.directive('show-loading-close',function(el){
+    el.addEventListener("click", function(){
+        el.classList += " loading";
+
+        setTimeout(function(){
+            el.classList.remove('loading');
+            el.classList += " done";
+            el.querySelector(".checkmark").classList += " active";
+        },400);
+
+        var modal = el.closest(".modal");
+
+        setTimeout(function () {
+            modal.classList += " hide"; //Animation last 0.5s
+        },2000);
+
+        setTimeout(function () {
+            modal.classList += " remove";
+        },2550);
+    });
+});
+
 Vue.directive('open-model',function(el,binding){
    el.addEventListener('click',function(){
        var classOpen = "." + binding.value.bind;
        var modal = document.querySelector(classOpen);
+       modal.classList.remove("remove");
+       modal.classList.remove("hide");
+       modal.querySelector("input").value = "";
+       modal.querySelector(".checkmark").classList.remove("active");
+       modal.querySelector("button").classList.remove("done");
        modal.classList += " active";
    });
 });
