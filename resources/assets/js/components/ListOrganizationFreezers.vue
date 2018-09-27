@@ -2,17 +2,19 @@
     <div class="freezer-table">
         <button class="bluebutton" v-open-model="{ bind : 'createFreezer' }" v-on:click="createFreezer">Create new freezer</button>
         <div class="inner-freezer-table">
-            <div v-for="freezer in freezers" class="freezer shadow-sm">
-                <h2>{{ freezer.name }}</h2>
-                <div class="toolbar">
-                    <font-awesome-icon class="trash icon" icon="trash"
-                                       v-on:click="deleteFreezer(freezer.id)"
-                    />
-                    <font-awesome-icon class="edit icon" icon="edit"
-                                       v-on:click="editFreezer(freezer.id,freezer.name,freezer.description)"
-                                       v-open-model="{bind: 'editfreezer'}" />
+            <transition-group tag="div" name="list-complete">
+                <div v-for="freezer in freezers" class="freezer shadow-sm list-item" v-bind:key="freezer.id">
+                    <h2>{{ freezer.name }}</h2>
+                    <div class="toolbar">
+                        <font-awesome-icon class="trash icon" icon="trash"
+                                           v-on:click="deleteFreezer(freezer.id)"
+                        />
+                        <font-awesome-icon class="edit icon" icon="edit"
+                                           v-on:click="editFreezer(freezer.id,freezer.name,freezer.description)"
+                                           v-open-model="{bind: 'editfreezer'}" />
+                    </div>
                 </div>
-            </div>
+            </transition-group>
         </div>
     </div>
 </template>

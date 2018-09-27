@@ -2,18 +2,20 @@
     <div class="category-table">
         <button class="bluebutton" v-open-model="{ bind : 'createCategory' }">Create new category</button>
         <div class="inner-category-table">
-            <div v-for="cat in cats" class="category shadow-sm">
-                <h2>{{ cat.label }}</h2>
-                <p>{{ cat.items_count }}</p>
-                <div class="toolbar">
-                    <font-awesome-icon class="trash icon" icon="trash"
-                                       v-on:click="deleteCat(cat.id,cat.label)"
-                                        />
-                    <font-awesome-icon class="edit icon" icon="edit"
-                                       v-on:click="editCat(cat.id,cat.label)"
-                                       v-open-model="{bind: 'editcategory'}" />
+            <transition-group tag="div" name="list-complete">
+                <div v-for="cat in cats" class="category shadow-sm list-item"  v-bind:key="cat.id">
+                    <h2>{{ cat.label }}</h2>
+                    <p>{{ cat.items_count }}</p>
+                    <div class="toolbar">
+                        <font-awesome-icon class="trash icon" icon="trash"
+                                           v-on:click="deleteCat(cat.id,cat.label)"
+                                            />
+                        <font-awesome-icon class="edit icon" icon="edit"
+                                           v-on:click="editCat(cat.id,cat.label)"
+                                           v-open-model="{bind: 'editcategory'}" />
+                    </div>
                 </div>
-            </div>
+            </transition-group>
         </div>
     </div>
 </template>

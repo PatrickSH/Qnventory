@@ -55886,6 +55886,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -55973,48 +55975,59 @@ var render = function() {
     _c(
       "div",
       { staticClass: "inner-category-table" },
-      _vm._l(_vm.cats, function(cat) {
-        return _c("div", { staticClass: "category shadow-sm" }, [
-          _c("h2", [_vm._v(_vm._s(cat.label))]),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(cat.items_count))]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "toolbar" },
-            [
-              _c("font-awesome-icon", {
-                staticClass: "trash icon",
-                attrs: { icon: "trash" },
-                on: {
-                  click: function($event) {
-                    _vm.deleteCat(cat.id, cat.label)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("font-awesome-icon", {
-                directives: [
-                  {
-                    name: "open-model",
-                    rawName: "v-open-model",
-                    value: { bind: "editcategory" },
-                    expression: "{bind: 'editcategory'}"
-                  }
-                ],
-                staticClass: "edit icon",
-                attrs: { icon: "edit" },
-                on: {
-                  click: function($event) {
-                    _vm.editCat(cat.id, cat.label)
-                  }
-                }
-              })
-            ],
-            1
-          )
-        ])
-      })
+      [
+        _c(
+          "transition-group",
+          { attrs: { tag: "div", name: "list-complete" } },
+          _vm._l(_vm.cats, function(cat) {
+            return _c(
+              "div",
+              { key: cat.id, staticClass: "category shadow-sm list-item" },
+              [
+                _c("h2", [_vm._v(_vm._s(cat.label))]),
+                _vm._v(" "),
+                _c("p", [_vm._v(_vm._s(cat.items_count))]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "toolbar" },
+                  [
+                    _c("font-awesome-icon", {
+                      staticClass: "trash icon",
+                      attrs: { icon: "trash" },
+                      on: {
+                        click: function($event) {
+                          _vm.deleteCat(cat.id, cat.label)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("font-awesome-icon", {
+                      directives: [
+                        {
+                          name: "open-model",
+                          rawName: "v-open-model",
+                          value: { bind: "editcategory" },
+                          expression: "{bind: 'editcategory'}"
+                        }
+                      ],
+                      staticClass: "edit icon",
+                      attrs: { icon: "edit" },
+                      on: {
+                        click: function($event) {
+                          _vm.editCat(cat.id, cat.label)
+                        }
+                      }
+                    })
+                  ],
+                  1
+                )
+              ]
+            )
+          })
+        )
+      ],
+      1
     )
   ])
 }
@@ -56082,6 +56095,8 @@ module.exports = Component.exports
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_TalkerMixin__ = __webpack_require__(2);
+//
+//
 //
 //
 //
@@ -56193,50 +56208,61 @@ var render = function() {
     _c(
       "div",
       { staticClass: "inner-freezer-table" },
-      _vm._l(_vm.freezers, function(freezer) {
-        return _c("div", { staticClass: "freezer shadow-sm" }, [
-          _c("h2", [_vm._v(_vm._s(freezer.name))]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "toolbar" },
-            [
-              _c("font-awesome-icon", {
-                staticClass: "trash icon",
-                attrs: { icon: "trash" },
-                on: {
-                  click: function($event) {
-                    _vm.deleteFreezer(freezer.id)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("font-awesome-icon", {
-                directives: [
-                  {
-                    name: "open-model",
-                    rawName: "v-open-model",
-                    value: { bind: "editfreezer" },
-                    expression: "{bind: 'editfreezer'}"
-                  }
-                ],
-                staticClass: "edit icon",
-                attrs: { icon: "edit" },
-                on: {
-                  click: function($event) {
-                    _vm.editFreezer(
-                      freezer.id,
-                      freezer.name,
-                      freezer.description
-                    )
-                  }
-                }
-              })
-            ],
-            1
-          )
-        ])
-      })
+      [
+        _c(
+          "transition-group",
+          { attrs: { tag: "div", name: "list-complete" } },
+          _vm._l(_vm.freezers, function(freezer) {
+            return _c(
+              "div",
+              { key: freezer.id, staticClass: "freezer shadow-sm list-item" },
+              [
+                _c("h2", [_vm._v(_vm._s(freezer.name))]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "toolbar" },
+                  [
+                    _c("font-awesome-icon", {
+                      staticClass: "trash icon",
+                      attrs: { icon: "trash" },
+                      on: {
+                        click: function($event) {
+                          _vm.deleteFreezer(freezer.id)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("font-awesome-icon", {
+                      directives: [
+                        {
+                          name: "open-model",
+                          rawName: "v-open-model",
+                          value: { bind: "editfreezer" },
+                          expression: "{bind: 'editfreezer'}"
+                        }
+                      ],
+                      staticClass: "edit icon",
+                      attrs: { icon: "edit" },
+                      on: {
+                        click: function($event) {
+                          _vm.editFreezer(
+                            freezer.id,
+                            freezer.name,
+                            freezer.description
+                          )
+                        }
+                      }
+                    })
+                  ],
+                  1
+                )
+              ]
+            )
+          })
+        )
+      ],
+      1
     )
   ])
 }

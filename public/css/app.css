@@ -273,6 +273,24 @@ label.label-floating {
   left: 0;
 }
 
+/***List animation***/
+
+.list-item {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.list-complete-enter,
+.list-complete-leave-to {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+.list-complete-leave-active {
+  position: absolute;
+}
+
 .logobar.unauthed {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -820,7 +838,7 @@ ul {
   background-size: contain;
 }
 
-.inner-category-table {
+.inner-category-table > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -834,7 +852,7 @@ ul {
   padding-top: 30px;
 }
 
-.inner-category-table .category {
+.inner-category-table > div .category {
   max-width: 220px;
   width: 220px;
   height: 220px;
@@ -862,17 +880,17 @@ ul {
   cursor: pointer;
 }
 
-.inner-category-table .category h2 {
+.inner-category-table > div .category h2 {
   color: #636b6f;
   font-size: 28px;
 }
 
-.inner-category-table .category p {
+.inner-category-table > div .category p {
   color: #7385ED;
   font-size: 16px;
 }
 
-.inner-category-table .category .toolbar {
+.inner-category-table > div .category .toolbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -882,11 +900,11 @@ ul {
           flex-direction: row;
 }
 
-.inner-category-table .category .toolbar .icon {
+.inner-category-table > div .category .toolbar .icon {
   color: #7385ED;
 }
 
-.inner-category-table .category .toolbar .trash {
+.inner-category-table > div .category .toolbar .trash {
   margin-right: 20px;
 }
 
@@ -922,7 +940,7 @@ ul {
   width: 150px;
 }
 
-.inner-freezer-table {
+.inner-freezer-table > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -936,7 +954,7 @@ ul {
   padding-top: 30px;
 }
 
-.inner-freezer-table .freezer {
+.inner-freezer-table > div .freezer {
   max-width: 220px;
   width: 220px;
   height: 220px;
@@ -964,17 +982,17 @@ ul {
   cursor: pointer;
 }
 
-.inner-freezer-table .freezer h2 {
+.inner-freezer-table > div .freezer h2 {
   color: #636b6f;
   font-size: 28px;
 }
 
-.inner-freezer-table .freezer p {
+.inner-freezer-table > div .freezer p {
   color: #7385ED;
   font-size: 16px;
 }
 
-.inner-freezer-table .freezer .toolbar {
+.inner-freezer-table > div .freezer .toolbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -984,11 +1002,11 @@ ul {
           flex-direction: row;
 }
 
-.inner-freezer-table .freezer .toolbar .icon {
+.inner-freezer-table > div .freezer .toolbar .icon {
   color: #7385ED;
 }
 
-.inner-freezer-table .freezer .toolbar .trash {
+.inner-freezer-table > div .freezer .toolbar .trash {
   margin-right: 20px;
 }
 
