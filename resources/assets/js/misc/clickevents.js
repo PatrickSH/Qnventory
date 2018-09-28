@@ -40,7 +40,9 @@ Vue.directive('open-model',function(el,binding){
        modal.classList.remove("remove");
        modal.classList.remove("hide");
        modal.querySelector("input").value = "";
-       modal.querySelector("textarea").value = "";
+       if(modal.querySelector("textarea"))
+           modal.querySelector("textarea").value = "";
+
        modal.querySelector(".checkmark").classList.remove("active");
        modal.querySelector("button").classList.remove("done");
        modal.classList += " active";

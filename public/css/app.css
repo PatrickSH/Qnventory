@@ -582,6 +582,48 @@ ul {
   display: block;
 }
 
+#app .edititem {
+  display: none;
+}
+
+#app .edititem.active {
+  display: block;
+}
+
+#app .createItem {
+  display: none;
+}
+
+#app .createItem.active {
+  display: block;
+}
+
+#app .label_under {
+  display: block;
+}
+
+#app .round_notifier {
+  position: absolute;
+  cursor: pointer;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  background-color: #7385ED;
+  color: #fff;
+  border-radius: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 900px) {
   #app .bluebutton:hover {
     background-color: #7385ED;
@@ -836,6 +878,12 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  position: relative;
+}
+
+#qrcodes #code-overview .codes .code .round_notifier {
+  right: 5px;
+  top: 5px;
 }
 
 .inner-category-table > div {
@@ -1065,6 +1113,134 @@ ul {
 }
 
 #freezer-page .bluebutton {
+  width: 150px;
+}
+
+.inner-item-table > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.inner-item-table > div .item {
+  max-width: 220px;
+  width: 220px;
+  height: 220px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 21%;
+          flex: 1 0 21%;
+  margin: 5px;
+  text-align: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+.inner-item-table > div .item h2 {
+  color: #636b6f;
+  font-size: 28px;
+}
+
+.inner-item-table > div .item p {
+  color: #7385ED;
+  font-size: 16px;
+}
+
+.inner-item-table > div .item .toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.inner-item-table > div .item .toolbar .icon {
+  color: #7385ED;
+}
+
+.inner-item-table > div .item .toolbar .trash {
+  margin-right: 20px;
+}
+
+.edititem .input-groups {
+  margin-top: 30px;
+  width: 100%;
+  display: block;
+}
+
+.edititem .input-groups .group {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: visible;
+  height: 48px;
+}
+
+.edititem .input-groups .group textarea {
+  max-height: 35px;
+}
+
+.edititem .input-groups .group.textarea {
+  height: 55px;
+}
+
+.edititem .input-groups .group.textarea .float-input-label:focus ~ label,
+.edititem .input-groups .group.textarea .float-input-label:not(:placeholder-shown) ~ label {
+  top: 32px;
+}
+
+.createItem .input-groups {
+  margin-top: 30px;
+  width: 100%;
+  display: block;
+}
+
+.createItem .input-groups .group {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: visible;
+  height: 48px;
+}
+
+.createItem .input-groups .group textarea {
+  max-height: 35px;
+}
+
+.createItem .input-groups .group.textarea {
+  height: 55px;
+}
+
+.createItem .input-groups .group.textarea .float-input-label:focus ~ label,
+.createItem .input-groups .group.textarea .float-input-label:not(:placeholder-shown) ~ label {
+  top: 32px;
+}
+
+#items-page .bluebutton {
   width: 150px;
 }
 

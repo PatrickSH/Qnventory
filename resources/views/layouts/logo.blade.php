@@ -10,6 +10,7 @@
                 <li <?php echo Request::is('codes') ? 'class=active' :  ''; ?>><a href="/codes">Your QR codes</a></li>
                 <li <?php echo Request::is('category') ? 'class=active' :  ''; ?>><a href="/category">Categories</a></li>
                 <li <?php echo Request::is('freezer') ? 'class=active' :  ''; ?>><a href="/freezer">Freezers</a></li>
+                <li <?php echo Request::is('items') ? 'class=active' :  ''; ?>><a href="/items">Items</a></li>
             </ul>
         </div>
         <organizations></organizations>

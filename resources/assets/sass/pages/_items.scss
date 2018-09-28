@@ -1,0 +1,107 @@
+.inner-item-table > div{
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding-top: 30px;
+
+  .item {
+    max-width: 220px;
+    width: 220px;
+    height: 220px;
+    flex: 1 0 21%;
+    margin: 5px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    h2{
+      color:$textGrey;
+      font-size: 28px;
+    }
+    p{
+      color: $ourBlue;
+      font-size: 16px;
+    }
+
+    .toolbar{
+      display: flex;
+      flex-direction: row;
+
+      .icon{
+        color: $ourBlue;
+      }
+      .trash{
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.edititem{
+  .input-groups {
+    margin-top: 30px;
+    width: 100%;
+    display: block;
+    .group {
+      width: 100%;
+      margin-bottom: 10px;
+      position: relative;
+      overflow: visible;
+      height: 48px;
+
+
+      textarea{
+        max-height: 35px;
+      }
+
+      &.textarea{
+        height:55px;
+
+        .float-input-label:focus ~ label, .float-input-label:not(:placeholder-shown) ~ label{
+          top:32px;
+        }
+
+      }
+    }
+  }
+}
+
+.createItem{
+  .input-groups {
+    margin-top: 30px;
+    width: 100%;
+    display: block;
+    .group {
+      width: 100%;
+      margin-bottom: 10px;
+      position: relative;
+      overflow: visible;
+      height: 48px;
+
+      textarea{
+        max-height: 35px;
+      }
+
+      &.textarea{
+        height:55px;
+
+        .float-input-label:focus ~ label, .float-input-label:not(:placeholder-shown) ~ label{
+          top:32px;
+        }
+
+      }
+    }
+  }
+}
+
+#items-page{
+  .bluebutton{
+    width: 150px;
+  }
+}

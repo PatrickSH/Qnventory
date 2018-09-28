@@ -231,6 +231,41 @@ li, ul{
 }
 
 
+#app .edititem{
+    display: none;
+}
+
+#app .edititem.active{
+    display: block;
+}
+
+#app .createItem{
+    display: none;
+}
+
+#app .createItem.active{
+    display: block;
+}
+
+
+#app .label_under{display: block;}
+
+#app .round_notifier{
+    position: absolute;
+    cursor: pointer;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    background-color: $ourBlue;
+    color:#fff;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 900px) {

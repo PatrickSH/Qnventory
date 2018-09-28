@@ -9,9 +9,9 @@ require('axios');
 window.Vue = require('vue');
 require('./misc/clickevents');
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faTrash,faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faTrash,faEdit,faPaperclip } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-library.add(faTrash,faEdit);
+library.add(faTrash,faEdit,faPaperclip);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
@@ -37,6 +37,7 @@ Vue.component('create-freezer-item', require('./components/scan/CreateFreezerIte
 Vue.component('use-qr-code-scan', require('./components/scan/UseQRCodeComponent.vue'));
 Vue.component('list-org-cats', require('./components/ListOrganizationCategories.vue'));
 Vue.component('list-org-freezers', require('./components/ListOrganizationFreezers.vue'));
+Vue.component('list-org-items', require('./components/ListOrganizationItems.vue'));
 
 
 const app = new Vue({

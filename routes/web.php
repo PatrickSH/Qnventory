@@ -55,6 +55,11 @@ Route::group(['middleware' => ['loggedin']],function (){
         'as' => 'freezer'
     ]);
 
+    Route::get('/items',[
+        'uses' => 'ItemController@index',
+        'as' => 'items'
+    ]);
+
 });
 
 

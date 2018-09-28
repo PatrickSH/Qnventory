@@ -29,6 +29,12 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        position: relative;
+
+        .round_notifier{
+          right: 5px;
+          top: 5px;
+        }
       }
     }
 
