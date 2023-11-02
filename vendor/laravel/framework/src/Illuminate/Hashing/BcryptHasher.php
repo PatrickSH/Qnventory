@@ -2,8 +2,8 @@
 
 namespace Illuminate\Hashing;
 
-use RuntimeException;
 use Illuminate\Contracts\Hashing\Hasher as HasherContract;
+use RuntimeException;
 
 class BcryptHasher extends AbstractHasher implements HasherContract
 {
@@ -12,7 +12,14 @@ class BcryptHasher extends AbstractHasher implements HasherContract
      *
      * @var int
      */
-    protected $rounds = 10;
+    protected $rounds = 12;
+
+    /**
+     * Indicates whether to perform an algorithm check.
+     *
+     * @var bool
+     */
+    protected $verifyAlgorithm = false;
 
     /**
      * Create a new hasher instance.
@@ -23,13 +30,14 @@ class BcryptHasher extends AbstractHasher implements HasherContract
     public function __construct(array $options = [])
     {
         $this->rounds = $options['rounds'] ?? $this->rounds;
+        $this->verifyAlgorithm = $options['verify'] ?? $this->verifyAlgorithm;
     }
 
     /**
      * Hash the given value.
      *
      * @param  string  $value
-     * @param  array   $options
+     * @param  array  $options
      * @return string
      *
      * @throws \RuntimeException
@@ -48,10 +56,29 @@ class BcryptHasher extends AbstractHasher implements HasherContract
     }
 
     /**
+     * Check the given plain value against a hash.
+     *
+     * @param  string  $value
+     * @param  string  $hashedValue
+     * @param  array  $options
+     * @return bool
+     *
+     * @throws \RuntimeException
+     */
+    public function check($value, $hashedValue, array $options = [])
+    {
+        if ($this->verifyAlgorithm && $this->info($hashedValue)['algoName'] !== 'bcrypt') {
+            throw new RuntimeException('This password does not use the Bcrypt algorithm.');
+        }
+
+        return parent::check($value, $hashedValue, $options);
+    }
+
+    /**
      * Check if the given hash has been hashed using the given options.
      *
      * @param  string  $hashedValue
-     * @param  array   $options
+     * @param  array  $options
      * @return bool
      */
     public function needsRehash($hashedValue, array $options = [])
